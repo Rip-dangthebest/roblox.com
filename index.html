@@ -4,32 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login to Roblox</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+            width: 320px;
+            text-align: center;
+            color: white;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #333;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 3px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #222;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .login-btn:hover {
+            background-color: #444;
+        }
+        .option-btn {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .option-btn:hover {
+            background-color: #444;
+        }
+        .forgot-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #bbb;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">&#9632;</div>
-        <div class="menu">
-            <a href="#">Charts</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Create</a>
-            <a href="#">Robux</a>
-        </div>
-        <div class="search-box">
-            <input type="text" placeholder="Search">
-        </div>
-    </div>
     <div class="login-container">
-        <div class="login-box">
-            <h2>Login to Roblox</h2>
-            <input type="text" placeholder="Username/Email/Phone">
-            <input type="password" placeholder="Password">
-            <button class="login-btn">Log In</button>
-            <p class="forgot">Forgot Password or Username?</p>
-            <hr>
-            <button class="extra-btn">Email Me a One-Time Code</button>
-            <button class="extra-btn">Use Another Device</button>
-        </div>
+        <h2>Login to Roblox</h2>
+        <input type="text" placeholder="Username/Email/Phone">
+        <input type="password" placeholder="Password">
+        <button class="login-btn">Log In</button>
+        <a href="#" class="forgot-link">Forgot Password or Username?</a>
+        <button class="option-btn">Email Me a One-Time Code</button>
+        <button class="option-btn">Use Another Device</button>
     </div>
 </body>
 </html>
