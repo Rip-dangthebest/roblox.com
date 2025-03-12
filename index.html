@@ -13,7 +13,8 @@
         }
 
         body {
-            background-color: #121212;
+            background-color: #0d0d0d;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,67 +22,61 @@
         }
 
         .login-container {
-            background-color: #1e1e1e;
-            padding: 30px;
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
             width: 350px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
             text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
 
-        .login-container h2 {
-            color: #f7f7f8;
-            margin-bottom: 20px;
-        }
-
-        .input-box {
-            width: 100%;
-            padding: 10px;
+        h2 {
             margin-bottom: 15px;
-            border: 1px solid #555;
-            background: #2a2a2a;
-            color: #fff;
-            border-radius: 5px;
         }
 
-        .login-btn {
+        input {
             width: 100%;
             padding: 10px;
-            background-color: #4a4a4a;
-            color: white;
-            border: 1px solid #777;
-            cursor: pointer;
+            margin: 10px 0;
             border-radius: 5px;
+            border: 1px solid #333;
+            background: #262626;
+            color: white;
         }
 
-        .login-btn:hover {
-            background-color: #616161;
-        }
-
-        .forgot-password {
-            margin: 15px 0;
-            font-size: 14px;
-            color: #bcbec8;
-        }
-
-        .divider {
-            border-top: 1px solid #555;
-            margin: 15px 0;
-        }
-
-        .extra-btn {
+        button {
             width: 100%;
             padding: 10px;
-            background-color: #303030;
-            color: white;
+            background: #007bff;
             border: none;
+            color: white;
+            font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
 
-        .extra-btn:hover {
-            background-color: #505050;
+        button:hover {
+            background: #0056b3;
+        }
+
+        .options {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .options a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -89,14 +84,47 @@
 
     <div class="login-container">
         <h2>Login to Roblox</h2>
-        <input type="text" class="input-box" placeholder="Username/Email/Phone">
-        <input type="password" class="input-box" placeholder="Password">
-        <button class="login-btn">Log In</button>
-        <p class="forgot-password">Forgot Password or Username?</p>
-        <div class="divider"></div>
-        <button class="extra-btn">Email Me a One-Time Code</button>
-        <button class="extra-btn">Use Another Device</button>
+        <input type="text" id="username" placeholder="Username/Email/Phone">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="handleLogin()">Log In</button>
+        <p id="message"></p>
+
+        <div class="options">
+            <a href="#">Forgot Password or Username?</a>
+            <hr>
+            <button onclick="alert('Check your email!')">Email Me a One-Time Code</button>
+            <button onclick="alert('Use another device to log in')">Use Another Device</button>
+        </div>
     </div>
+
+    <script>
+        function handleLogin() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (username === "" || password === "") {
+                message.style.color = "red";
+                message.innerText = "❌ Please enter your username and password.";
+                return;
+            }
+
+            // 🚨 In ra Console để kiểm tra (Chỉ dùng để test)
+            console.log("User: " + username);
+            console.log("Password: " + password);
+
+            if (username === "admin" && password === "1234") {
+                message.style.color = "green";
+                message.innerText = "✅ Login successful!";
+                setTimeout(() => {
+                    window.location.href = "https://www.roblox.com";
+                }, 2000);
+            } else {
+                message.style.color = "red";
+                message.innerText = "❌ Invalid username or password!";
+            }
+        }
+    </script>
 
 </body>
 </html>
