@@ -1,86 +1,67 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Giống Roblox</title>
+    <title>Login to Roblox</title>
     <style>
         body {
+            background-color: #0d0d0d;
+            color: white;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f2f2f2;
-        }
-        .navbar {
-            background-color: #232323;
-            padding: 10px 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            color: white;
+            height: 100vh;
+            margin: 0;
         }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .game-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
+        .login-box {
+            background-color: #1a1a1a;
             padding: 20px;
-        }
-        .game-card {
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .game-card img {
-            width: 100%;
             border-radius: 5px;
+            text-align: center;
+            width: 300px;
         }
-        .buttons {
-            display: flex;
-            gap: 10px;
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+            border-radius: 3px;
         }
-        .buttons button {
-            padding: 8px 12px;
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
             border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-box button:hover {
+            background-color: #0056b3;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 14px;
             cursor: pointer;
         }
-        .login { background: #4CAF50; color: white; }
-        .signup { background: #008CBA; color: white; }
+        .forgot-password:hover {
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <h1>Giống Roblox</h1>
-        <div class="nav-links">
-            <a href="#">Trang chủ</a>
-            <a href="#">Trò chơi</a>
-            <a href="#">Cửa hàng</a>
-        </div>
-        <div class="buttons">
-            <button class="login">Đăng nhập</button>
-            <button class="signup">Đăng ký</button>
-        </div>
-    </div>
-    
-    <div class="game-container">
-        <div class="game-card">
-            <img src="https://via.placeholder.com/200" alt="Game 1">
-            <p>Game 1</p>
-        </div>
-        <div class="game-card">
-            <img src="https://via.placeholder.com/200" alt="Game 2">
-            <p>Game 2</p>
-        </div>
-        <div class="game-card">
-            <img src="https://via.placeholder.com/200" alt="Game 3">
-            <p>Game 3</p>
-        </div>
+    <div class="login-box">
+        <h2>Login to Roblox</h2>
+        <input type="text" placeholder="Username/Email/Phone">
+        <input type="password" placeholder="Password">
+        <button>Log In</button>
+        <div class="forgot-password">Forgot Password or Username?</div>
     </div>
 </body>
 </html>
